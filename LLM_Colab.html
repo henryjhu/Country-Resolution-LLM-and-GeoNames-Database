@@ -7796,7 +7796,7 @@ zstd is already the newest version (1.5.5+dfsg2-2build1.1).
 <div class="jp-InputPrompt jp-InputArea-prompt">In [135]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2. Install Ollama if you haven't already</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Installing Ollama</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Installing Ollama..."</span><span class="p">)</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"curl -fsSL https://ollama.com/install.sh | sh"</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -7831,7 +7831,7 @@ zstd is already the newest version (1.5.5+dfsg2-2build1.1).
 <div class="jp-InputPrompt jp-InputArea-prompt">In [136]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># start the ollama server as a background process</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Start the ollama server as a background process</span>
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"/content/ollama_logs"</span><span class="p">,</span> <span class="n">exist_ok</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">log</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"/content/ollama_logs/server.log"</span><span class="p">,</span><span class="s2">"w"</span><span class="p">)</span>
 <span class="n">proc</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
@@ -7840,7 +7840,7 @@ zstd is already the newest version (1.5.5+dfsg2-2build1.1).
 	<span class="n">env</span><span class="o">=</span><span class="p">{</span><span class="o">**</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">,</span> <span class="s2">"OLLAMA_HOST"</span><span class="p">:</span> <span class="s2">"0.0.0.0:11434"</span><span class="p">}</span>
 <span class="p">)</span>
 
-<span class="c1">#Wait until the server responds on :11434</span>
+<span class="c1"># Wait until the server responds is up runnng</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
   <span class="k">try</span><span class="p">:</span>
     <span class="n">r</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://localhost:11434/api/tags"</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -7878,8 +7878,7 @@ zstd is already the newest version (1.5.5+dfsg2-2build1.1).
 <div class="jp-InputPrompt jp-InputArea-prompt">In [137]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ollama run llama3.1:8b</span>
-<span class="c1"># 2. Install llama3.1:8b if you haven't already</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Installing llama3.1:8b</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Installing llama3.1:8b..."</span><span class="p">)</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"ollama run llama3.1:8b"</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
